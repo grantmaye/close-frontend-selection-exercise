@@ -3,25 +3,18 @@ const { Fragment, memo, useCallback, useState } = React;
 const ListItem = memo(function ListItem({ item, isSelected, onToggle }) {
   const toggle = () => onToggle(item.name);
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      toggle();
-    }
-  };
-
   return (
-    <li
+    <li>
+      <button
+        type="button"
       className={`List__item List__item--${item.color}${
         isSelected ? ' List__item--selected' : ''
       }`}
-      role="button"
-      tabIndex={0}
       aria-pressed={isSelected}
       onClick={toggle}
-      onKeyDown={handleKeyDown}
     >
       {item.name}
+      </button>
     </li>
   );
 });
