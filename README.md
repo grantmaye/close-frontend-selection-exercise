@@ -15,5 +15,26 @@ The application uses the same generated item data and component boundary as the 
 
 ## Run locally
 
-Open `index.html` in a browser. React and Babel are loaded from public CDNs, so no installation or build step is required.
+Serve the repository over HTTP because Babel fetches `app.jsx`:
+
+```sh
+python3 -m http.server 0 --bind 127.0.0.1
+```
+
+Open the localhost URL and port printed by the server. React 18.2.0 and Babel 7.25.6 load from public CDNs, so internet access is required for this no-build demo. Opening `index.html` directly with `file://` can fail because of browser cross-origin restrictions.
+
+## Documentation and checks
+
+- [Technical manual](docs/technical-manual.md)
+- [Exercise story and demo](docs/product-story.md)
+
+For deterministic Chromium tests (the server supplies the same pinned dependencies locally):
+
+```sh
+npm ci
+npx playwright install chromium
+npm test
+```
+
+This remains a small interview exercise, without a backend, persistence, account system, or production SaaS claims. No proprietary interview prompt is included.
 

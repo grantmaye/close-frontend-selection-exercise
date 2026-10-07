@@ -34,7 +34,12 @@ body {
 }
 
 .List__item {
-  line-height: 60px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 6px;
+  font: inherit;
+  line-height: 1.25;
   text-align: center;
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
@@ -74,3 +79,12 @@ body {
 .List__item--silver { background-color: #ddd; }
 .List__item--gray { background-color: #aaa; }
 .List__item--black { background-color: #111; }
+
+/* Keep the exercise palette while making labels readable on bright tiles. */
+.List__item--aqua, .List__item--teal, .List__item--olive,
+.List__item--green, .List__item--lime, .List__item--yellow,
+.List__item--orange, .List__item--red, .List__item--fuchsia,
+.List__item--silver, .List__item--gray {
+  color: #111;
+  text-shadow: none;
+}

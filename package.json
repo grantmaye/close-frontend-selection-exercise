@@ -1,0 +1,14 @@
+{
+  "name": "close-frontend-selection-exercise",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@babel/standalone": "7.25.6",
+    "@playwright/test": "1.63.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
